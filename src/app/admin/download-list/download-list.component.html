@@ -1,0 +1,36 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-2">
+            <app-sidebar></app-sidebar>
+    
+        </div>
+        <div class="col-lg-10">
+            <p>All download Recipe list </p>
+            <table class="table shadow my-5">
+                <thead>
+                    <tr>
+                    <th>#</th>
+                    <th>Recipe Id</th>
+                    <th>Recipe Name</th>
+                    <th>Recipe cuisine</th>
+                    <th>Recipe Download count</th>
+                </tr>
+                </thead>
+                <tbody>
+                    @for (item of allDownloadList; track $index;let i=$index) {
+                        <tr>
+                            <td>{{i+1}}</td>
+                            <td> {{item.recipeId}} </td>
+                            <td> {{item.recipeName}} </td>
+                            <td> {{item.recipeCuisine}} </td>
+                            <td> {{item.count}} </td>
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+    
+        </div>
+    </div>
+    
+</div>
